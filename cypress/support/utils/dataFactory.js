@@ -42,3 +42,16 @@ export function buildStudent() {
   };
 }
 
+/** Gera um registro aleatório para a tabela do Web Tables. */
+export function buildWebTableRecord() {
+  const firstName = faker.person.firstName();
+  const lastName = faker.person.lastName();
+  return {
+    firstName,
+    lastName,
+    email: faker.internet.email({ firstName, lastName, provider: 'qa-accenture.com' }).toLowerCase(),
+    age: faker.number.int({ min: 18, max: 65 }),
+    salary: faker.number.int({ min: 2000, max: 20000 }),
+    department: faker.helpers.arrayElement(['QA', 'Engineering', 'Legal', 'Insurance', 'Compliance']),
+  };
+}
