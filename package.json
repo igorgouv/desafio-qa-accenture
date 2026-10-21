@@ -1,0 +1,29 @@
+{
+  "name": "desafio-qa-accenture",
+  "version": "1.0.0",
+  "description": "Desafio técnico de QA Automation (Accenture): API da Book Store e fluxos de frontend do DemoQA com Cypress + Cucumber (BDD) e Page Objects.",
+  "author": "Igor Gouveia Barbosa",
+  "license": "MIT",
+  "scripts": {
+    "test": "cypress run --browser electron",
+    "test:api": "cypress run --spec \"cypress/e2e/api/**/*.feature\"",
+    "test:front": "cypress run --spec \"cypress/e2e/frontend/**/*.feature\"",
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "28.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "2.2.8",
+    "@faker-js/faker": "10.0.0",
+    "cypress": "15.21.1",
+    "esbuild": "0.25.10"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/support/step_definitions/**/*.js"
+    ],
+    "html": {
+      "enabled": true,
+      "output": "reports/cucumber-report.html"
+    }
+  }
+}
