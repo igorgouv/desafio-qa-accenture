@@ -1,0 +1,2 @@
+Arquivo de teste utilizado no upload do campo "Picture" do Practice Form (DemoQA).
+Desafio técnico QA Automation - Accenture.
