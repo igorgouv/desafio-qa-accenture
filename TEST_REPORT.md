@@ -93,4 +93,4 @@ npm install
 npm test
 ```
 
-O relatório HTML do Cucumber é gerado em `reports/cucumber-report.html`.
+O relatório HTML do Cucumber é gerado em `reports/cucumber-report.html` ao executar `npm test` (a pasta não é versionada). Ele também fica disponível como artefato **cucumber-report** em cada execução do [GitHub Actions](https://github.com/igorgouv/desafio-qa-accenture/actions).
